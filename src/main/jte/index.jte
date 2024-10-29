@@ -17,12 +17,13 @@
         <div class="left-part">
             <h1 class="main-title">Ne laissez</h1> <br/>
             <div class="main-title">
-                <span class="lol"> &nbsp&nbsp;&nbsp&nbsp&nbsp;&nbsp&nbsp&nbsp;&nbsp&nbsp&nbsp;&nbsp</span>
+                <span> &nbsp&nbsp;&nbsp&nbsp&nbsp;&nbsp&nbsp&nbsp;&nbsp&nbsp&nbsp;&nbsp</span>
                 <h1 class="main-title">pas de traces</h1>
             </div>
 
             <p class="subtitle">Le site dédié à la sensibilisation à l'éthique en milieu naturel, conçu pour s'informer et évaluer ses connaissances.</p>
             <div class="flex-top-link">
+                @template.components.link(path = "/ressources", textUnderline = "En savoir plus", text = "sur le sujet", linkType = com.milan.lnt.beans.LinkTypeEnum.right)
             </div>
         </div>
         <img class="img-home" src="/images/illu-home.svg" alt="Illustration d'une femme avec une tente en nature"/>

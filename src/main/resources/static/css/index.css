@@ -30,7 +30,7 @@ html, body {
 
 h1 {
     text-transform: uppercase;
-    text-decoration: underline var(--green);
+    text-decoration: underline 3px var(--green);
 }
 
 .subtitle {
@@ -457,4 +457,48 @@ header{
     .box-prevention img {
         display: none;
     }
+}
+
+/* LINK */
+.container.left img {
+    transform: rotate(180deg);
+}
+.left{
+    flex-direction: row-reverse;
+}
+.container {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+.containerText {
+    display: flex;
+}
+.text {
+    padding-left: 5px;
+}
+.link {
+    text-decoration: none;
+}
+.underline {
+    height: 3px;
+    background-color: var(--green);
+    width: 100%;
+}
+.underlineHover {
+    height: 3px;
+    background-color: var(--green);
+    width: 0;
+    transition: 0.3s;
+}
+.container:hover .underlineHover {
+    width: 100%;
+}
+img {
+    margin-left: 0;
+    transition: 0.3s;
+}
+.container:hover img {
+    margin-left: 5px;
 }
