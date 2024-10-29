@@ -4,14 +4,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ne laissez pas de traces</title>
     <script src="https://unpkg.com/htmx.org@2.0.3"></script>
+    <script src="https://unpkg.com/htmx-ext-preload@2.0.1/preload.js"></script>
     <link rel="stylesheet" href="/css/index.css" content="text/css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>
 </head>
+<header>
+    @template.components.navbar()
+</header>
 <body>
-
 <div id="root">
     <section class="top-home-page">
         <div class="left-part">
-            <h1>Ne laissez <br/> &nbsp&nbsp;&nbsppas de traces</h1>
+            <h1 class="main-title">Ne laissez</h1> <br/>
+            <div class="main-title">
+                <span class="lol"> &nbsp&nbsp;&nbsp&nbsp&nbsp;&nbsp&nbsp&nbsp;&nbsp&nbsp&nbsp;&nbsp</span>
+                <h1 class="main-title">pas de traces</h1>
+            </div>
+
             <p class="subtitle">Le site dédié à la sensibilisation à l'éthique en milieu naturel, conçu pour s'informer et évaluer ses connaissances.</p>
             <div class="flex-top-link">
             </div>
