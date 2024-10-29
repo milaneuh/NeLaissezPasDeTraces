@@ -19,14 +19,17 @@ html, body {
     position: absolute;
 }
 
-
-.main-title {
+.main-title-section {
     display: flex;
     flex-direction: row;
     margin: 0;
-    margin-top: 10px;
-
 }
+
+.main-title {
+    margin: 10px 0 0;
+    text-decoration: underline 3px var(--green);
+}
+
 
 h1 {
     text-transform: uppercase;
@@ -460,19 +463,19 @@ header{
 }
 
 /* LINK */
-.container.left img {
+.containerLink.left img {
     transform: rotate(180deg);
 }
 .left{
     flex-direction: row-reverse;
 }
-.container {
+.containerLink {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     cursor: pointer;
 }
-.containerText {
+.containerLinkText {
     display: flex;
 }
 .text {
@@ -481,24 +484,24 @@ header{
 .link {
     text-decoration: none;
 }
-.underline {
+.underlineLink {
     height: 3px;
     background-color: var(--green);
     width: 100%;
 }
-.underlineHover {
+.underlineHoverLink {
     height: 3px;
     background-color: var(--green);
     width: 0;
     transition: 0.3s;
 }
-.container:hover .underlineHover {
+.containerLink:hover .underlineHoverLink {
     width: 100%;
 }
-img {
+.containerLink img {
     margin-left: 0;
     transition: 0.3s;
 }
-.container:hover img {
+.containerLink:hover img {
     margin-left: 5px;
 }

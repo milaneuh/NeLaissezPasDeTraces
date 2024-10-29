@@ -16,7 +16,7 @@
     <section class="top-home-page">
         <div class="left-part">
             <h1 class="main-title">Ne laissez</h1> <br/>
-            <div class="main-title">
+            <div class="main-title-section">
                 <span> &nbsp&nbsp;&nbsp&nbsp&nbsp;&nbsp&nbsp&nbsp;&nbsp&nbsp&nbsp;&nbsp</span>
                 <h1 class="main-title">pas de traces</h1>
             </div>
