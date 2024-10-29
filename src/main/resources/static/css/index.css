@@ -1,16 +1,27 @@
-.logo-h1{
+@import 'colors.css';
+@import "fonts.css";
+html, body {
+    min-height: 100vh;
+}
+
+
+
+.logo-h1 {
     position: relative;
 }
-.o-svg{
+
+.o-svg {
     width: 28px;
     top: 94px;
     left: 140px;
     z-index: -1;
     position: absolute;
 }
+
 h1 {
     text-transform: uppercase;
 }
+
 .subtitle {
     margin-top: 32px;
     margin-bottom: 24px;
@@ -19,6 +30,7 @@ h1 {
     line-height: 130%;
     font-size: 20px;
 }
+
 .flex-top-link {
     display: flex;
     flex-direction: column;
@@ -27,7 +39,7 @@ h1 {
 
 /* Home Page */
 .green-bg {
-    background-color: #70C33C;
+    background-color: var(--green);
     padding: 0 5px;
 }
 
@@ -54,7 +66,7 @@ h1 {
 
 .box-stat {
     width: 23vw;
-    color: black;
+    color: var(--black);
 }
 
 .number-stat {
@@ -85,19 +97,23 @@ h1 {
     padding: 0 10vw;
     gap: 128px;
 }
-.text-prevention{
+
+.text-prevention {
     width: 32vw;
 }
+
 .instruction-text {
     line-height: 130%;
     margin-left: 5px;
     margin-top: 24px;
     margin-bottom: 80px;
 }
+
 .box-prevention {
     display: flex;
     justify-content: space-between;
 }
+
 .box-prevention:nth-child(2) {
     flex-direction: row-reverse;
 }
@@ -113,9 +129,11 @@ h1 {
     display: flex;
     gap: 32px;
 }
+
 .right-part img {
     width: 200px;
 }
+
 .ressource-text {
     margin: 50px 0;
     line-height: 130%;
@@ -128,40 +146,89 @@ h1 {
     align-items: center;
     justify-content: center;
 }
+
 .about-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 30vw;
 }
+
 .about-box h2 {
     text-align: center;
 }
+
 .about-text {
     margin: 48px 0;
     line-height: 130%;
 }
-@media screen and (min-width: 0px) and (max-width: 300px) {
-    .o-svg{
-        width: 18px;
-        top: 58px;
-        left:89.5px;
+
+.img-home {
+    margin-left: 30px;
+    width: 40vw;
+}
+
+
+/* CHOICE BUTTON */
+.deco-choicebtn{
+    position: absolute;
+    left: -15px;
+    bottom: -15px;
+    width: 150px;
+    height: 150px;
+}
+@media screen and (max-width:800px){
+    .deco-choicebtn{
+        width: 120px;
+        height: 120px;
+        left: -10px;
+        bottom: -10px;
     }
 }
-@media screen and (min-width: 301px) and (max-width: 500px) {
-    .o-svg{
-        width: 20px;
-        top: 68px;
-        left:103.5px;
-    }
+.container-choice.main{
+    background-color: var(--green);
 }
-@media screen and (min-width: 501px) and (max-width: 800px) {
-    .o-svg{
-        width: 22px;
-        top: 88px;
-        left:132.5px;
-    }
+.container-choice.main:hover {
+    background-color: var(--green-hover);
 }
+.container-choice.main:active {
+    background-color: var(--green-clicked);
+}
+.container-choice.secondary{
+    background-color: var(--beige);
+}
+.container-choice.secondary:hover {
+    background-color: var(--beige-hover);
+}
+.container-choice.secondary:active {
+    background-color: var(--white);
+}
+.container-choice {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Ajustez l'alignement du texte selon vos besoins */
+    text-decoration: none;
+}
+
+.title-choice {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 8px;
+}
+
+.description-choice {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--black);
+}
+
 @media screen and (min-width: 0px) and (max-width: 800px) {
     .subtitle {
         width: 90%;
@@ -174,6 +241,7 @@ h1 {
         padding: 0 5vw;
         flex-direction: column;
     }
+
     .img-home {
         margin-top: 48px;
         width: 90vw;
@@ -183,20 +251,25 @@ h1 {
     .prevention {
         margin-top: 64px;
     }
+
     .flex-prevention {
         padding: 0 5vw;
         gap: 64px;
     }
-    .text-prevention{
+
+    .text-prevention {
         width: 90vw;
     }
+
     .instruction-text {
         margin-left: 5px;
         margin-bottom: 40px;
     }
+
     .box-prevention img {
         display: none;
     }
+
     .statistique {
         margin-top: 64px;
         padding: 0 5vw;
@@ -218,19 +291,24 @@ h1 {
     .ressources .right-part {
         flex-wrap: wrap;
     }
+
     .ressources .right-part img {
         width: 30vw;
         min-width: 300px;
     }
+
     .about {
         margin-top: 64px;
     }
+
     .about-box {
         width: 90vw;
     }
+
     .about h2 {
         text-align: left;
     }
+
     .about-text {
         margin: 32px 0;
     }
@@ -240,6 +318,7 @@ h1 {
     .img-home {
         width: 40vw;
     }
+
     .top-home-page {
         padding: 0 5vw;
     }
@@ -247,13 +326,16 @@ h1 {
     .flex-prevention {
         padding: 0 15vw;
     }
-    .text-prevention{
+
+    .text-prevention {
         width: 90vw;
     }
+
     .instruction-text {
         margin-left: 5px;
         margin-bottom: 40px;
     }
+
     .box-prevention img {
         display: none;
     }

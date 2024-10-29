@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    color: var(--black);
+    font-size: 52px;
+    line-height: 130%;
+}
+
+@media screen and (min-width: 0px) and (max-width: 300px) {
+    h1 {
+        font-size: 32px;
+    }
+}
+
+@media screen and (min-width: 301px) and (max-width: 500px) {
+    h1 {
+        font-size: 38px;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 800px) {
+    h1 {
+        font-size: 48px;
+    }
+}
+
+h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    color: var(--black);
+    font-size: clamp(20px, 3vw, 28px);
+}
+
+h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    color: var(--black);
+    font-size: 22px;
+    line-height: 130%;
+}
+
+p {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
+
+.main-button {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 900;
+    color: var(--black);
+    text-transform: uppercase;
+}
+
+.main-button-big {
+    font-size: 24px;
+}
+
+.main-button-small {
+    font-size: 16px;
+}
+
+a {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    color: var(--black);
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+.bigText {
+    font-family: "DM Sans", sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--black)
+}
