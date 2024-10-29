@@ -1,0 +1,260 @@
+.logo-h1{
+    position: relative;
+}
+.o-svg{
+    width: 28px;
+    top: 94px;
+    left: 140px;
+    z-index: -1;
+    position: absolute;
+}
+h1 {
+    text-transform: uppercase;
+}
+.subtitle {
+    margin-top: 32px;
+    margin-bottom: 24px;
+    width: 70%;
+    font-weight: 600;
+    line-height: 130%;
+    font-size: 20px;
+}
+.flex-top-link {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Home Page */
+.green-bg {
+    background-color: #70C33C;
+    padding: 0 5px;
+}
+
+.top-home-page {
+    margin-top: 128px;
+    padding: 0 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-home-page .left-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.statistique {
+    margin-top: 128px;
+    padding: 0 10vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-stat {
+    width: 23vw;
+    color: black;
+}
+
+.number-stat {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.text-stat {
+    margin-top: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+.source {
+    font-weight: 200;
+    text-decoration: none;
+}
+
+.prevention {
+    margin-top: 128px;
+}
+
+.flex-prevention {
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10vw;
+    gap: 128px;
+}
+.text-prevention{
+    width: 32vw;
+}
+.instruction-text {
+    line-height: 130%;
+    margin-left: 5px;
+    margin-top: 24px;
+    margin-bottom: 80px;
+}
+.box-prevention {
+    display: flex;
+    justify-content: space-between;
+}
+.box-prevention:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
+.ressources {
+    margin-top: 128px;
+    padding: 0 10vw;
+    display: flex;
+    gap: 128px;
+}
+
+.ressources .right-part {
+    display: flex;
+    gap: 32px;
+}
+.right-part img {
+    width: 200px;
+}
+.ressource-text {
+    margin: 50px 0;
+    line-height: 130%;
+}
+
+.about {
+    margin-top: 128px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.about-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;
+}
+.about-box h2 {
+    text-align: center;
+}
+.about-text {
+    margin: 48px 0;
+    line-height: 130%;
+}
+@media screen and (min-width: 0px) and (max-width: 300px) {
+    .o-svg{
+        width: 18px;
+        top: 58px;
+        left:89.5px;
+    }
+}
+@media screen and (min-width: 301px) and (max-width: 500px) {
+    .o-svg{
+        width: 20px;
+        top: 68px;
+        left:103.5px;
+    }
+}
+@media screen and (min-width: 501px) and (max-width: 800px) {
+    .o-svg{
+        width: 22px;
+        top: 88px;
+        left:132.5px;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 800px) {
+    .subtitle {
+        width: 90%;
+        font-size: 20px;
+    }
+
+    /* Home Page */
+    .top-home-page {
+        margin-top: 45px;
+        padding: 0 5vw;
+        flex-direction: column;
+    }
+    .img-home {
+        margin-top: 48px;
+        width: 90vw;
+        max-width: 500px;
+    }
+
+    .prevention {
+        margin-top: 64px;
+    }
+    .flex-prevention {
+        padding: 0 5vw;
+        gap: 64px;
+    }
+    .text-prevention{
+        width: 90vw;
+    }
+    .instruction-text {
+        margin-left: 5px;
+        margin-bottom: 40px;
+    }
+    .box-prevention img {
+        display: none;
+    }
+    .statistique {
+        margin-top: 64px;
+        padding: 0 5vw;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .box-stat {
+        width: 90vw;
+    }
+
+    .ressources {
+        flex-direction: column;
+        margin-top: 64px;
+        padding: 0 5vw;
+        gap: 64px;
+    }
+
+    .ressources .right-part {
+        flex-wrap: wrap;
+    }
+    .ressources .right-part img {
+        width: 30vw;
+        min-width: 300px;
+    }
+    .about {
+        margin-top: 64px;
+    }
+    .about-box {
+        width: 90vw;
+    }
+    .about h2 {
+        text-align: left;
+    }
+    .about-text {
+        margin: 32px 0;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1250px) {
+    .img-home {
+        width: 40vw;
+    }
+    .top-home-page {
+        padding: 0 5vw;
+    }
+
+    .flex-prevention {
+        padding: 0 15vw;
+    }
+    .text-prevention{
+        width: 90vw;
+    }
+    .instruction-text {
+        margin-left: 5px;
+        margin-bottom: 40px;
+    }
+    .box-prevention img {
+        display: none;
+    }
+}
