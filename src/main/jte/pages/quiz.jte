@@ -3,44 +3,59 @@
 @param int points
 @param boolean showAnswer = false
 
-<div class="quizContainer" id="container">
+<script>
+    function selectOption(element, answer) {
+        document.querySelectorAll('.card').forEach(option => option.classList.remove('selected'));
+        element.classList.add('selected');
+        document.getElementById("selectedAnswer").value = answer;
+        document.getElementById("validateButton").disabled = false;
+    }
+</script>
+
+<div class="quizContainer" x-data="{ selectedAnswer: null, showAnswer: false }" x-init="
+    $watch('showAnswer', value => {
+        if (value) {
+            setTimeout(() => {
+                document.getElementById('answerContainer').scrollIntoView({ behavior: 'smooth' });
+            }, 300);
+        }
+    });
+">
     <h3>Question ${question.index()} / 10</h3>
     <h2 class="quizTitle">${question.question()}</h2>
+    <form hx-post="/quiz/answer" hx-target=".quiz-container" class="choicesContainer">
+        <input type="hidden" name="selectedAnswer" x-bind:value="selectedAnswer">
 
-    @if(!presentationMode)
-        <div class="choicesContainer">
-            @for(com.milan.lnt.Choice choice : question.choices())
-                <article class="card">
-                    @template.components.quiz-button(checked = (showAnswer && choice.isGoodAnswer()), error = (showAnswer && !choice.isGoodAnswer()), choice = choice)
-                </article>
-            @endfor
-        </div>
-    @endif
+        @for(com.milan.lnt.Choice choice : question.choices())
+            <div
+                    class="card"
+                    :class="{ 'selected': selectedAnswer === ${""+choice.index()} }"
+                    @click="selectedAnswer = ${""+choice.index()}"
+            >
+                <label style="display: flex; align-items: center;">
+                    <h2 class="choiceIndex">${choice.index()}.</h2>
+                    <p class="answer">${choice.text()}</p>
+                </label>
+            </div>
+        @endfor
+    </form>
 
-    <!-- TODO Btn
-    <MainButton
-            onClick={() => {
-    showAnswer = true;
-    scrollToView()
-    }}
-    disabled={leftPointToBet > 0 && !isPresentation}
-    >
-    </MainButton> -->
-
-    <button class="main-button-small main-button" type="button">
+    <button
+            type="submit"
+            @click="showAnswer = true"
+            class="main-button-small main-button validateButton"
+            :disabled="selectedAnswer === null || showAnswer === true"
+            id="validateButton">
         ${presentationMode ? "Voir la réponse" : "Valider"}
     </button>
 
-
-    @if(showAnswer)
-        <div class="answerContainer" id="top">
-            <p class="answerTitle">Réponse</p>
-            <div class="textContainer">
-                <p class="bigText">${question.answer()}</p>
-            </div>
-            <button class="main-button-small main-button" type="button">
-                ${question.index() == 10 ? "Terminer" : "Question suivante"}
-            </button>
+    <div x-cloak x-show="showAnswer" x-transition class="answerContainer" id="answerContainer">
+        <p class="answerTitle">Réponse</p>
+        <div class="textContainer">
+            <p class="bigText">${question.answer()}</p>
         </div>
-    @endif
+        <button class="main-button-small main-button" type="button">
+            ${question.index() == 10 ? "Terminer" : "Question suivante"}
+        </button>
+    </div>
 </div>
