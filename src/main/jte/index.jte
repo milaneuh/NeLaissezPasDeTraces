@@ -106,7 +106,7 @@
                 de manière transparente. Découvre notre section Ressources pour des informations fiables et détaillées sur
                 l’éthique en milieu naturel, et teste tes connaissances dans notre espace Quiz pour évaluer et approfondir
                 ton savoir. </p>
-            <!-- TODO add à propos link -->
+            @template.components.link(path = "/about", textUnderline = "À", text = "propos", linkType = com.milan.lnt.beans.LinkTypeEnum.right)
         </div>
     </section>
 </div>

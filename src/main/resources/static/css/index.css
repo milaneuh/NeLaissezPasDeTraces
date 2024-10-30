@@ -1,22 +1,17 @@
 @import 'colors.css';
 @import "fonts.css";
-html, body {
+
+html,
+body {
     min-height: 100vh;
 }
 
-
+#root {
+    margin-top: 30px;
+}
 
 .logo-h1 {
     position: relative;
-}
-
-
-.o-svg {
-    width: 28px;
-    top: 94px;
-    left: 140px;
-    z-index: -1;
-    position: absolute;
 }
 
 .main-title-section {
@@ -29,7 +24,6 @@ html, body {
     margin: 10px 0 0;
     text-decoration: underline 3px var(--green);
 }
-
 
 h1 {
     text-transform: uppercase;
@@ -173,7 +167,7 @@ h1 {
 }
 
 .about-text {
-    margin: 48px 0;
+    margin: 30px 0;
     line-height: 130%;
 }
 
@@ -184,39 +178,47 @@ h1 {
 
 
 /* CHOICE BUTTON */
-.deco-choicebtn{
+.deco-choicebtn {
     position: absolute;
     left: -15px;
     bottom: -15px;
     width: 150px;
     height: 150px;
 }
-@media screen and (max-width:800px){
-    .deco-choicebtn{
+
+@media screen and (max-width:800px) {
+    .deco-choicebtn {
         width: 120px;
         height: 120px;
         left: -10px;
         bottom: -10px;
     }
 }
-.container-choice.main{
+
+.container-choice.main {
     background-color: var(--green);
 }
+
 .container-choice.main:hover {
     background-color: var(--green-hover);
 }
+
 .container-choice.main:active {
     background-color: var(--green-clicked);
 }
-.container-choice.secondary{
+
+.container-choice.secondary {
     background-color: var(--beige);
 }
+
 .container-choice.secondary:hover {
     background-color: var(--beige-hover);
 }
+
 .container-choice.secondary:active {
     background-color: var(--white);
 }
+
 .container-choice {
     position: relative;
     width: 100%;
@@ -226,7 +228,8 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center; /* Ajustez l'alignement du texte selon vos besoins */
+    text-align: center;
+    /* Ajustez l'alignement du texte selon vos besoins */
     text-decoration: none;
 }
 
@@ -244,15 +247,17 @@ h1 {
 }
 
 /* NAVBAR */
-header{
+header {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 999;
 }
-.display-mobile{
+
+.display-mobile {
     display: none;
 }
+
 .flex-header {
     background-color: var(--white);
     display: flex;
@@ -260,7 +265,8 @@ header{
     align-items: center;
     padding: 20px 5vw;
 }
-.menu{
+
+.menu {
     display: flex;
     gap: 24px;
     align-items: center;
@@ -310,7 +316,8 @@ header{
         gap: 24px;
         align-items: center;
         position: fixed;
-        top: -100%; /* Positionnez le menu sous le header par défaut */
+        top: -100%;
+        /* Positionnez le menu sous le header par défaut */
         left: 0;
         width: 100%;
         background-color: var(--white);
@@ -329,6 +336,7 @@ header{
     .underline::after {
         display: none;
     }
+
     .mobile {
         display: flex;
         align-items: center;
@@ -341,11 +349,13 @@ header{
         font-size: 16px;
         text-transform: uppercase;
     }
+
     hr {
         width: 80%;
         border: 1px solid var(--black);
     }
-    .display-mobile{
+
+    .display-mobile {
         display: block;
     }
 }
@@ -430,9 +440,6 @@ header{
         text-align: left;
     }
 
-    .about-text {
-        margin: 32px 0;
-    }
 }
 
 @media screen and (min-width: 800px) and (max-width: 1250px) {
@@ -466,42 +473,83 @@ header{
 .containerLink.left img {
     transform: rotate(180deg);
 }
-.left{
+
+.left {
     flex-direction: row-reverse;
 }
+
 .containerLink {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     cursor: pointer;
 }
+
 .containerLinkText {
     display: flex;
 }
+
 .text {
     padding-left: 5px;
 }
+
 .link {
     text-decoration: none;
 }
+
 .underlineLink {
     height: 3px;
     background-color: var(--green);
     width: 100%;
 }
+
 .underlineHoverLink {
     height: 3px;
     background-color: var(--green);
     width: 0;
     transition: 0.3s;
 }
+
 .containerLink:hover .underlineHoverLink {
     width: 100%;
 }
+
 .containerLink img {
     margin-left: 0;
     transition: 0.3s;
 }
+
 .containerLink:hover img {
     margin-left: 5px;
+}
+
+/* ABOUT */
+.contenuAbout {
+    max-width: 60vw;
+    margin: auto;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.paragrapheAbout p {
+    line-height: 140%;
+}
+
+.paragrapheAbout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 40vw;
+}
+
+@media screen and (max-width: 1000px) {
+    .contenuAbout {
+        max-width: 70vw;
+    }
+
+    .paragrapheAbout {
+        max-width: 80vw;
+    }
 }
