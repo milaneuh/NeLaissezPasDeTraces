@@ -1,18 +1,20 @@
 
-    <div class="flex-header">
-        <button class="nav-style" hx-get="/" hx-push-url="true" hx-trigger="click" hx-target="#root" hx-swap="innerHTML">
+    <div id="endContainer" class="flex-header"  x-init="setTimeout(() => {
+                    document.getElementById('endContainer').scrollIntoView({ behavior: 'smooth' });
+                }, 300);">
+        <a class="nav-style" hx-get="/" hx-push-url="true" hx-trigger="click" hx-target="body" hx-swap="innerHTML">
         <img src="/images/logo.svg" alt="logo ne laissez pas de trace" />
-        </button>
+        </a>
        <nav x-data="{ mobileMenuIsOpen: false }" >
             <!-- Desktop Menu -->
            <ul class="menu" :class="mobileMenuIsOpen ? '' : 'open'" >
-               <li><button class="nav-style underline" hx-get="/about" hx-push-url="true" hx-trigger="click" hx-target="#root" hx-swap="innerHTML">à propos</button></li>
+               <li><a class="nav-style underline" hx-get="/about" hx-push-url="true" hx-trigger="click" hx-target="body" hx-swap="innerHTML">à propos</a></li>
                <hr class="display-mobile">
-               <li><button class="nav-style underline"  hx-get="/ressources" hx-push-url="true" hx-trigger="click" hx-target="#root" hx-swap="innerHTML">ressources</button></li>
+               <li><a class="nav-style underline"  hx-get="/ressources" hx-push-url="true" hx-trigger="click" hx-target="body" hx-swap="innerHTML">ressources</a></li>
                <hr class="display-mobile">
-               <li><button class="nav-style underline"  hx-get="/game" hx-push-url="true" hx-trigger="click" hx-target="#root" hx-swap="innerHTML">Le test</button></li>
+               <li><a class="nav-style underline"  hx-get="/game" hx-push-url="true" hx-trigger="click" hx-target="body" hx-swap="innerHTML">Le test</a></li>
                <hr class="display-mobile">
-               <li><button class="nav-style underline"  hx-get="/guideAtelier" hx-push-url="true" hx-trigger="click" hx-target="#root" hx-swap="innerHTML">organiser un atelier</button></li>
+               <li><a class="nav-style underline"  hx-get="/guideAtelier" hx-push-url="true" hx-trigger="click" hx-target="body" hx-swap="innerHTML">organiser un atelier</a></li>
                <hr class="display-mobile">
            </ul>
 

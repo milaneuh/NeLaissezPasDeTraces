@@ -4,15 +4,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ne laissez pas de traces</title>
     <script src="https://unpkg.com/htmx.org@2.0.3"></script>
-    <script src="https://unpkg.com/htmx-ext-preload@2.0.1/preload.js"></script>
-    <link rel="stylesheet" href="/css/index.css" content="text/css">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="/css/index.css" content="text/css">
 </head>
 <header>
     @template.components.navbar()
 </header>
 <body>
-<div id="root">
     <section class="top-home-page">
         <div class="left-part">
             <h1 class="main-title">Ne laissez</h1> <br/>
@@ -36,7 +34,7 @@
                      alt="Illustration d'un homme qui fait un test en ligne"/>
                 <div class="text-prevention">
                     <h2>Je
-                        <mark class="green-bg">teste</mark>
+                        <span class="green-bg">teste</span>
                         mes connaissances
                     </h2>
                     <p class="instruction-text">Prêt à améliorer tes connaissances sur les principes "Ne Laissez Aucune
@@ -109,7 +107,5 @@
             @template.components.link(path = "/about", textUnderline = "À", text = "propos", linkType = com.milan.lnt.beans.LinkTypeEnum.right)
         </div>
     </section>
-</div>
-
 </body>
 </html>

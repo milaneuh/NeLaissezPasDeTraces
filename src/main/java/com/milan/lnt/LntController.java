@@ -32,6 +32,11 @@ class LntController {
         return "pages/about";
     }
 
+    @GetMapping("/ressources")
+    public String ressources() {
+        return "pages/ressources";
+    }
+
     @GetMapping("/game")
     public String game() {
         return "pages/game";
@@ -50,7 +55,7 @@ class LntController {
         model.addAttribute("presentationMode", presentationMode);
         model.addAttribute("points", points);
         if(questionId == 10){
-            return "pages/final-quiz";
+            return "pages/results";
         }else {
             model.addAttribute("question",questionsRepository.getQuestionById(questionId + 1));
             return "pages/quiz";
@@ -95,74 +100,74 @@ class QuestionsRepository {
         questions.addAll(List.of(
                 new Question(
                         1,
-                        "Quand on se promène en forêt, que doit-on faire de ses déchets ?",
+                        "Vous campez en pleine nature et avez besoin de vous laver. Quelle est la meilleure façon de le faire sans nuire à l'environnement ?",
                         List.of(
-                                new Choice(1, "Les enterrer.", false),
-                                new Choice(2, "Les ramasser et les emporter avec soi.", true),
-                                new Choice(3, "Les laisser sur place, car ils sont biodégradables.", false)
+                                new Choice(1, "Utiliser du savon biodégradable directement dans une rivière.", false),
+                                new Choice(2, "S'éloigner des sources d'eau d'au moins 60 mètres et utiliser un récipient pour se laver.", true),
+                                new Choice(3, "Utiliser n'importe quel savon à proximité d'un cours d'eau.", false)
 
                         ),
-                        " En emportant vos déchets, vous préservez la nature, protégez la faune et la flore, et donnez l'exemple aux autres. Chaque déchet, même petit, a un impact sur l'environnement."
+                        "Même les savons biodégradables peuvent être nuisibles pour les écosystèmes aquatiques. Il est important de s'éloigner des sources d'eau d'au moins 60 mètres et de se laver avec un récipient pour éviter la contamination des cours d'eau."
                 ),
                 new Question(
                         2,
-                        "Pour éviter l’érosion des sols, quelle est la meilleure pratique ?",
+                        "Vous traversez une zone fragile avec une végétation rare. Quelle est la meilleure attitude à adopter ?",
                         List.of(
-                                new Choice(1, "Rester sur les sentiers balisés.", true),
-                                new Choice(2, "Marcher à côté des sentiers pour éviter de les user.", false),
-                                new Choice(3, "Créer de nouveaux chemins en fonction de la végétation.", false)
+                                new Choice(1, "Marcher directement sur les plantes pour gagner du temps.", false),
+                                new Choice(2, "Créer un nouveau chemin pour éviter de déranger les autres randonneurs.", false),
+                                new Choice(3, "Suivre les sentiers balisés ou marcher sur des surfaces dures comme les rochers.", true)
                         ),
-                        "Rester sur les sentiers balisés permet de protéger la végétation fragile et de limiter l'érosion des sols."
+                        "Suivre les sentiers balisés ou marcher sur des surfaces dures aide à protéger la végétation fragile en évitant de la piétiner. La création de nouveaux chemins contribue à la destruction des habitats naturels."
                 ),
                 new Question(
                         3,
-                        "Comment gérer les restes de nourriture lors d'une sortie en nature ?",
+                        "Vous souhaitez installer un campement pour la nuit en pleine nature. Quel est le meilleur endroit pour minimiser votre impact ?",
                         List.of(
-                                new Choice(1, "Les disperser dans la forêt pour les animaux.", false),
-                                new Choice(2, "Les brûler sur place.", false),
-                                new Choice(3, "Les emporter avec soi dans un sac à déchets.", true)
+                                new Choice(1, "Choisir un site déjà impacté, comme un espace où la végétation est absente.", true),
+                                new Choice(2, "Installer la tente près d'une source d'eau pour avoir un accès facile.", false),
+                                new Choice(3, "Créer un nouvel emplacement en dégageant la végétation.", true)
                         ),
-                        "Les restes de nourriture attirent les animaux et peuvent perturber l'écosystème. Il est important de les emporter dans un sac étanche pour éviter les mauvaises odeurs."
+                        "Utiliser un site déjà impacté permet de minimiser l'empreinte écologique de votre campement. Il est essentiel de ne pas perturber davantage la végétation et de rester à au moins 60 mètres des sources d'eau pour protéger les habitats aquatiques."
                 ),
                 new Question(
                         4,
-                        "Quelle est la règle concernant les feux de camp ?",
+                        "Vous avez préparé un repas en pleine nature et il reste de l'huile de cuisson. Comment devez-vous la gérer ?",
                         List.of(
-                                new Choice(1, "Faire un feu de camp uniquement si on ne laisse aucune trace de cendres.", false),
-                                new Choice(2, "Éviter les feux de camp sauf en cas d'urgence..", true),
-                                new Choice(3, "Faire un feu de camp dès que possible pour se réchauffer.", false)
+                                new Choice(1, " La verser sur le sol, car elle est biodégradable.", false),
+                                new Choice(2, "La collecter dans un récipient et la ramener chez vous.", true),
+                                new Choice(3, "La disperser loin du camp pour éviter d'attirer les animaux.", false)
                         ),
-                        " Les feux de camp peuvent provoquer des incendies et laisser des traces durables dans l'environnement. Il est préférable d'utiliser un réchaud de camping."
+                        "L'huile de cuisson peut attirer les animaux et contaminer le sol. Il est important de la collecter et de la ramener chez soi pour une élimination appropriée afin de minimiser son impact sur l'environnement."
                 ),
                 new Question(
                         5,
-                        "Comment respecter la faune sauvage ?",
+                        "En chemin, vous trouvez un arbre tombé qui bloque le sentier. Quelle est la meilleure action à entreprendre ?",
                         List.of(
-                                new Choice(1, "Approcher les animaux pour les observer de plus près.", false),
-                                new Choice(2, "Les observer de loin et éviter tout contact.", true),
-                                new Choice(3, "Leur donner de la nourriture pour les apprivoiser.", false)
+                                new Choice(1, "Contourner l'arbre en marchant sur la végétation environnante.", false),
+                                new Choice(2, "Faire demi-tour et chercher un autre chemin.", false),
+                                new Choice(3, "Signaler l'arbre tombé aux autorités compétentes si possible et passer par-dessus en limitant l'impact sur les alentours.", true)
                         ),
-                        "La faune sauvage est fragile et a besoin de calme pour vivre. En la dérangeant, vous pouvez la stresser et l'éloigner de son habitat naturel."
+                        "Signaler l'obstacle aux autorités compétentes est idéal pour qu'ils puissent gérer la situation. En attendant, il est préférable de passer par-dessus l'arbre en minimisant l'impact sur la végétation environnante."
                 ),
                 new Question(
                         6,
-                        "Si vous devez aller aux toilettes en pleine nature, que devriez-vous faire ?",
+                        "Vous traversez une zone où vivent de nombreux oiseaux en période de nidification. Quelle est la meilleure façon de les respecter ?",
                         List.of(
-                                new Choice(1, "Faire ses besoins près d'une rivière.", false),
-                                new Choice(2, "Creuser un trou à au moins 60 mètres des sources d'eau. ", true),
-                                new Choice(3, "Laisser les excréments au sol.", false)
+                                new Choice(1, "Approcher doucement les nids pour observer les oiseaux de plus près.", false),
+                                new Choice(2, "Rester à distance et éviter de faire du bruit pour ne pas les perturber.", true),
+                                new Choice(3, "Marquer les emplacements des nids pour que les autres randonneurs puissent les voir.", false)
                         ),
-                        "Pour protéger les ressources en eau et éviter la propagation de maladies, il est essentiel de s'éloigner des sentiers et des cours d'eau, de creuser un trou d'au moins 15 cm de profondeur et d'enterrer soigneusement ses excréments."
+                        " La période de nidification est très sensible pour les oiseaux. Les approcher ou faire du bruit peut provoquer du stress et mettre en danger leur reproduction. Il est essentiel de garder ses distances et de rester silencieux pour ne pas perturber leur habitat."
                 ),
                 new Question(
                         7,
-                        "Lors de la cueillette de plantes sauvages, quelle est la meilleure pratique ?",
+                        "Vous voyez un groupe de randonneurs qui nourrissent des animaux sauvages. Que devez-vous faire ?",
                         List.of(
-                                new Choice(1, " Récolter seulement les plantes qu'on connaît bien et en petite quantité.", true),
-                                new Choice(2, "Prendre tout ce qui est comestible pour éviter le gaspillage.", false),
-                                new Choice(3, "Utiliser les plantes pour décorer son camp.", false)
+                                new Choice(1, "Les rejoindre et nourrir les animaux avec eux.", false),
+                                new Choice(2, "Ignorer la situation et continuer votre chemin.", false),
+                                new Choice(3, "Leur expliquer calmement pourquoi il est dangereux de nourrir les animaux sauvages.", true)
                         ),
-                        "Certaines plantes sont protégées ou toxiques. Il est important de connaître les règles et de respecter la nature en ne prélevant qu'une petite quantité."
+                        "Nourrir les animaux sauvages peut les rendre dépendants des humains, altérer leur régime alimentaire naturel et les exposer à des dangers. En expliquant calmement les raisons pour lesquelles il ne faut pas nourrir la faune, vous contribuez à l'éducation des autres et à la protection des animaux."
                 ),
                 new Question(
                         8,
@@ -176,13 +181,13 @@ class QuestionsRepository {
                 ),
                 new Question(
                         9,
-                        "Comment réduire son impact sonore en nature ?",
+                        "Pourquoi est-il important de planifier et de préparer sa sortie en nature ?",
                         List.of(
-                                new Choice(1, "Parler doucement et éviter les bruits inutiles.", true),
-                                new Choice(2, "Utiliser des haut-parleurs pour la musique.", false),
-                                new Choice(3, "Appeler ses amis pour ne pas se perdre.", false)
+                                new Choice(1, "Pour éviter toute situation imprévue qui pourrait mettre en danger la sécurité ou l'environnement.", true),
+                                new Choice(2, "Pour impressionner les autres randonneurs avec votre équipement.", false),
+                                new Choice(3, "Pour avoir une excuse pour acheter du matériel de randonnée.", false)
                         ),
-                        "Le bruit dérange la faune et altère le plaisir de la randonnée pour les autres. Il est important de privilégier le silence et de respecter le calme de la nature."
+                        "La planification est essentielle pour assurer la sécurité et minimiser l'impact sur l'environnement. En connaissant les réglementations locales, les conditions météorologiques et les particularités des lieux, vous pouvez éviter les risques et respecter au mieux les principes \"Leave No Trace\"."
                 ),
                 new Question(
                         10,

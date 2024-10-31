@@ -3,6 +3,11 @@
 @param int points
 @param int answerId = 0
 
+<link rel="stylesheet" href="/css/index.css" content="text/css">
+<header>
+    @template.components.navbar()
+</header>
+
 <script>
     function selectOption(element, answer) {
         document.querySelectorAll('.card').forEach(option => option.classList.remove('selected'));
@@ -11,7 +16,6 @@
         document.getElementById("validateButton").disabled = false;
     }
 </script>
-
 <div id="quizContainer" class="quizContainer"
      x-data="{ selectedAnswer: null, showAnswer: false }">
 
@@ -68,4 +72,3 @@
         </button>
     </form>
 </div>
-

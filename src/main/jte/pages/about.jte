@@ -1,4 +1,9 @@
-<section  class="contenuAbout"   x-init="window.scrollTo(0,0);">
+<link rel="stylesheet" href="/css/index.css" content="text/css">
+<header>
+    @template.components.navbar()
+</header>
+
+<section  class="content"   x-init="window.scrollTo(0,0);">
     <h1 id="a_propos">À <span class="green-bg">propos</span></h1>
     <div class="paragrapheAbout">
         <h2>Le but de ce site</h2>

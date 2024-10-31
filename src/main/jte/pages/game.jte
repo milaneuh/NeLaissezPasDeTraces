@@ -1,4 +1,3 @@
-<div></div>
 <div class="content"  x-init="window.scrollTo(0,0);">
     <h1 id="title" >Teste tes <span class="green-bg">connaissances</span></h1>
     <p class="intro-jeu">Tu veux évaluer ta culture sur le thème de l'éthique en milieu naturel ? Démarre le jeu et remporte le plus de points !</p>
@@ -9,7 +8,7 @@
     </ul>
 
     <button
-            hx-get="/game/start" hx-push-url="true" hx-trigger="click" hx-target="#root"
+            hx-get="/game/start" hx-push-url="true" hx-trigger="click" hx-target="body"
             class="main-button-small main-button validateButton"
             id="validateButton">
         Lancer le jeu
@@ -25,21 +24,6 @@
         justify-content: center;
         align-items: center;
         font-family: 'DM Sans', sans-serif;
-    }
-
-    h1 .green-bg{
-        position: relative !important;
-        display: inline-block;
-    }
-
-    h1 .green-bg::before {
-        content: '';
-        z-index: -1;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: var(--green);
     }
 
     .intro-jeu{
