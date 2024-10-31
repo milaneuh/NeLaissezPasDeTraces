@@ -3,8 +3,11 @@ package com.milan.lnt;
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
@@ -42,9 +45,33 @@ class LntController {
         return "pages/quiz";
     }
 
-    @GetMapping("/game/publish-answer/{questionId}/{answerId}")
-    public String publishAnswer(){
-        return null;
+    @GetMapping("/game/next-question")
+    public String nextQuestion(@RequestParam(required = false, defaultValue = "false") boolean presentationMode,@RequestParam int questionId, @RequestParam int points, Model model) {
+        model.addAttribute("presentationMode", presentationMode);
+        model.addAttribute("points", points);
+        if(questionId == 10){
+            return "pages/final-quiz";
+        }else {
+            model.addAttribute("question",questionsRepository.getQuestionById(questionId + 1));
+            return "pages/quiz";
+        }
+    }
+
+    @PostMapping("/game/publish-answer")
+    public String publishAnswer(@RequestParam(required = false, defaultValue = "false") boolean presentationMode,@RequestParam int questionId, @RequestParam int answerId, @RequestParam int points, Model model) {
+        //Gestion des points
+        Question question = questionsRepository.getQuestionById(questionId);
+        var choice = question.choices().stream().filter(c ->  c.index() == answerId).findFirst().orElseThrow();
+
+        if(choice.isGoodAnswer()) {
+            points += 10;
+        }
+
+        model.addAttribute("points", points);
+        model.addAttribute("question",question);
+
+        return "components/quiz-answer";
+
     }
 
 }

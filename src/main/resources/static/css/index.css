@@ -564,33 +564,41 @@ header {
     text-align: center;
     padding: 100px 100px 100px;
 }
+
 .choicesContainer {
     display: flex;
     gap: 10px;
 }
+
 .quizTitle{
     margin-top: 30px;
     max-width: 60vw;
     margin-bottom: 24px;
 }
+
 .pointQuiz{
     margin-bottom: 100px;
 }
+
 .quizContainer .main-button{
     margin-top: 72px;
 }
+
 .resteMise{
     margin-bottom: 16px;
 }
+
 .textContainer{
     max-width: 60%;
     line-height: 40px;
 }
+
 .answerTitle{
     font-family: "DM Sans", sans-serif;
     font-size: 24px;
     font-weight: 600;
 }
+
 .answerContainer{
     display: flex;
     align-items: center;
@@ -598,6 +606,7 @@ header {
     flex-direction: column;
     padding: 100px 0;
 }
+
 @media screen and (min-width: 0px) and (max-width: 1000px) {
     .quizContainer {
         margin-top: 60px;
@@ -673,4 +682,24 @@ header {
     .card:active {
         transform-origin: 50%;
     }
+}
+/* Styles pour la carte correcte et incorrecte */
+.correct {
+    border: 2px solid var(--green);
+    background-color: var(--green);
+}
+
+.incorrect {
+    border: 2px solid #dc3545;
+    background-color: #dc3545;
+}
+
+/* Icônes de validation et d'erreur */
+.icon-check, .icon-cross {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 24px;
+    height: 24px;
+    fill: white;
 }

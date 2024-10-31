@@ -32,6 +32,8 @@
     <section class="prevention" id="jeu">
         <div class="flex-prevention">
             <div class="box-prevention">
+                <img class="img-home" src="/images/illu-home-2.svg"
+                     alt="Illustration d'un homme qui fait un test en ligne"/>
                 <div class="text-prevention">
                     <h2>Je
                         <mark class="green-bg">teste</mark>
@@ -43,10 +45,9 @@
                     </p>
                     @template.components.choice-button(type = com.milan.lnt.beans.ButtonTypeEnum.main, path = "/game", title = "Démarrer le test", description = "En autonomie")
                 </div>
-                <img class="img-home" src="/images/illu-home-2.svg"
-                     alt="Illustration d'un homme qui fait un test en ligne"/>
-            </div>
 
+            </div>
+            <!-- TODO Atelier pour les écoles
             <div class="box-prevention">
                 <div class="text-prevention">
                     <h2>Je suis <span class="yellow-bg">animateur·rice</span></h2>
@@ -58,9 +59,8 @@
                     @template.components.choice-button(type = com.milan.lnt.beans.ButtonTypeEnum.main, path = "/guideAtelier", title = "Préparer un atelier.", description = "Manuel d'atelier pour le milieu scolaire.")
                 </div>
                 <img class="img-home" src="/images/illu-home-3.svg" alt="Illustration d'un educateur face à sa classe"/>
-            </div>
+            </div>-->
         </div>
-
     </section>
     <section class="statistique">
         <div class="box-stat">
