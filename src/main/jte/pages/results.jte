@@ -1,9 +1,6 @@
 @param int points
 
 <link rel="stylesheet" href="/css/index.css" content="text/css">
-<header>
-    @template.components.navbar()
-</header>
 
 <div class="container"  x-init="window.scrollTo(0,0);">
     <h3><span>${points}</span>/100</h3>

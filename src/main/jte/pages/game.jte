@@ -8,7 +8,7 @@
     </ul>
 
     <button
-            hx-get="/game/start" hx-push-url="true" hx-trigger="click" hx-target="body"
+            hx-get="/game/start" hx-push-url="true" hx-trigger="click" hx-target="#root"
             class="main-button-small main-button validateButton"
             id="validateButton">
         Lancer le jeu

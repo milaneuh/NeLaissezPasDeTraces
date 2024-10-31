@@ -1,7 +1,4 @@
 <link rel="stylesheet" href="/css/index.css" content="text/css">
-<header>
-    @template.components.navbar()
-</header>
 
 <section class="ressources-container" x-init="window.scrollTo(0,0);">
     <h1 id="ressources"><span class="green-bg">Ressources</span></h1>

@@ -540,7 +540,7 @@ header {
 }
 
 /* ABOUT */
-.content {
+.contentAbout {
     max-width: 60vw;
     margin: auto;
     margin-top: 80px;
@@ -561,7 +561,7 @@ header {
 }
 
 @media screen and (max-width: 1000px) {
-    .content {
+    .contentAbout{
         max-width: 70vw;
     }
 

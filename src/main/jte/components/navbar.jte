@@ -1,20 +1,18 @@
 
-    <div id="endContainer" class="flex-header"  x-init="setTimeout(() => {
+    <nav x-data="{ mobileMenuIsOpen: false }" id="endContainer" class="flex-header"  x-init="setTimeout(() => {
                     document.getElementById('endContainer').scrollIntoView({ behavior: 'smooth' });
                 }, 300);">
-        <a class="nav-style" hx-get="/" hx-push-url="true" hx-trigger="click" hx-target="body" hx-swap="innerHTML">
-        <img src="/images/logo.svg" alt="logo ne laissez pas de trace" />
+        <a class="nav-style" hx-get="/" hx-push-url="true" hx-trigger="click" hx-target="#root" hx-swap="innerHTML">
+        <img src="/images/logo.svg" alt="logo ne laissez pas de trace" @click="mobileMenuIsOpen = !mobileMenuIsOpen"/>
         </a>
-       <nav x-data="{ mobileMenuIsOpen: false }" >
+
             <!-- Desktop Menu -->
-           <ul class="menu" :class="mobileMenuIsOpen ? '' : 'open'" >
-               <li><a class="nav-style underline" hx-get="/about" hx-push-url="true" hx-trigger="click" hx-target="body" hx-swap="innerHTML">à propos</a></li>
+           <ul   class="menu" :class="mobileMenuIsOpen ? '' : 'open'" >
+               <li><a class="nav-style underline" @click="mobileMenuIsOpen = !mobileMenuIsOpen" hx-get="/about" hx-push-url="true" hx-trigger="click" hx-target="#root" hx-swap="innerHTML">à propos</a></li>
                <hr class="display-mobile">
-               <li><a class="nav-style underline"  hx-get="/ressources" hx-push-url="true" hx-trigger="click" hx-target="body" hx-swap="innerHTML">ressources</a></li>
+               <li><a class="nav-style underline" @click="mobileMenuIsOpen = !mobileMenuIsOpen" hx-get="/ressources" hx-push-url="true" hx-trigger="click" hx-target="#root" hx-swap="innerHTML">ressources</a></li>
                <hr class="display-mobile">
-               <li><a class="nav-style underline"  hx-get="/game" hx-push-url="true" hx-trigger="click" hx-target="body" hx-swap="innerHTML">Le test</a></li>
-               <hr class="display-mobile">
-               <li><a class="nav-style underline"  hx-get="/guideAtelier" hx-push-url="true" hx-trigger="click" hx-target="body" hx-swap="innerHTML">organiser un atelier</a></li>
+               <li><a class="nav-style underline" @click="mobileMenuIsOpen = !mobileMenuIsOpen" hx-get="/game" hx-push-url="true" hx-trigger="click" hx-target="#root" hx-swap="innerHTML">Le test</a></li>
                <hr class="display-mobile">
            </ul>
 
@@ -30,5 +28,5 @@
             </button>
 
        </nav>
-    </div>
+    </nav>
     <hr class="ligne">

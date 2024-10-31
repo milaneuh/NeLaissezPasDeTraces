@@ -11,6 +11,7 @@
     @template.components.navbar()
 </header>
 <body>
+<div id="root">
     <section class="top-home-page">
         <div class="left-part">
             <h1 class="main-title">Ne laissez</h1> <br/>
@@ -107,5 +108,7 @@
             @template.components.link(path = "/about", textUnderline = "À", text = "propos", linkType = com.milan.lnt.beans.LinkTypeEnum.right)
         </div>
     </section>
+</div>
+
 </body>
 </html>
