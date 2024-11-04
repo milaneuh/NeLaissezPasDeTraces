@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ne laissez pas de traces</title>
-    <script src="https://unpkg.com/htmx.org@2.0.3"></script>
+    <script defer src="/js/htmx.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="/css/index.css" content="text/css">
 </head>
