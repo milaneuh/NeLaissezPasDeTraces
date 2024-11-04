@@ -79,6 +79,11 @@ class LntController {
 
     }
 
+    @GetMapping("/plan-ahead")
+    public String planAhead(){
+        return "pages/ressources/plan-ahead";
+    }
+
 }
 
 @Repository

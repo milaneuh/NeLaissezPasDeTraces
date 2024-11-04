@@ -1,6 +1,8 @@
 <link rel="stylesheet" href="/css/index.css" content="text/css">
 
-<section  class="contentAbout"   x-init="window.scrollTo(0,0);">
+@template.components.header()
+
+<section  class="contentAbout">
     <h1 id="a_propos">À <span class="green-bg">propos</span></h1>
     <div class="paragrapheAbout">
         <h2>Le but de ce site</h2>
@@ -27,3 +29,57 @@
         </p>
     </div>
 </section>
+<style>
+
+    .contentAbout {
+        max-width: 60vw;
+        margin: auto;
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .green-bg {
+         position: relative !important;
+         display: inline-block;
+     }
+     .green-bg::before {
+         content: '';
+         z-index: -1;
+         position: absolute;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         background-color: var(--green);
+         animation: highlight 0.5s;
+     }
+     @keyframes highlight {
+         0% {
+             width: 0;
+         }
+         100% {
+             width: 100%;
+         }
+     }
+    .paragrapheAbout p {
+        line-height: 140%;
+    }
+
+    .paragrapheAbout {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 40vw;
+    }
+
+    @media screen and (max-width: 1000px) {
+        .contentAbout{
+            max-width: 70vw;
+        }
+
+        .paragrapheAbout {
+            max-width: 80vw;
+        }
+    }
+
+</style>

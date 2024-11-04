@@ -9,7 +9,7 @@
         class="answerContainer"
         id="answerContainer"
         hx-get="/game/next-question"
-        hx-target="#root"
+        hx-target="body"
         hx-swap="innerHTML">
     <!-- Champs cachés pour envoyer les données -->
     <input type="hidden" name="questionId" value="${question.index()}">

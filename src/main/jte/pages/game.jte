@@ -1,20 +1,26 @@
-<div class="content"  x-init="window.scrollTo(0,0);">
-    <h1 id="title" >Teste tes <span class="green-bg">connaissances</span></h1>
-    <p class="intro-jeu">Tu veux évaluer ta culture sur le thème de l'éthique en milieu naturel ? Démarre le jeu et remporte le plus de points !</p>
+@template.components.header()
+<link rel="stylesheet" href="/css/index.css" content="text/css">
+
+<section class="content">
+    <h1 id="title">Teste tes <span class="green-bg">connaissances</span></h1>
+    <p class="intro-jeu">Tu veux évaluer ta culture sur le thème de l'éthique en milieu naturel ? Démarre le jeu et
+        remporte le plus de points !</p>
     <ul class="instruction">
         <li><span class="ligne-instruction">1. Tu démarres avec 0 point.</span></li>
-        <li><span class="ligne-instruction">2. À chaque question, tu gagnes 10 points pour chaque bonnes réponses.</span></li>
+        <li>
+            <span class="ligne-instruction">2. À chaque question, tu gagnes 10 points pour chaque bonnes réponses.</span>
+        </li>
         <li><span class="ligne-instruction">3. Aie le plus haut score possible à la fin des dix questions !</span></li>
     </ul>
 
     <button
-            hx-get="/game/start" hx-push-url="true" hx-trigger="click" hx-target="#root"
+            hx-get="/game/start" hx-push-url="true" hx-trigger="click" hx-target="body"
             class="main-button-small main-button validateButton"
             id="validateButton">
         Lancer le jeu
     </button>
 
-</div>
+</section>
 <style>
     .content{
         display: flex;
