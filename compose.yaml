@@ -1,0 +1,11 @@
+version: '1'
+services:
+  app:
+    container_name: ne-laissez-pas-de-traces
+    build:
+      context: .
+    image: 'lnt:0.0.1-SNAPSHOT'
+    ports:
+      - '8080:8080'
+    expose:
+      - 8080
