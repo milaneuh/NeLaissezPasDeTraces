@@ -32,7 +32,7 @@
             </div>
         </a>
 
-        <a class="sujet">
+        <a class="sujet" href="/remove-trash">
             <img class="img-ressource" src="/images/remove-trash.svg"
                  alt="Illustrationg de deux personnes rangeant des déchets"/>
             <div class="contenu">
@@ -42,14 +42,14 @@
             </div>
         </a>
 
-        <a class="sujet">
+        <a class="sujet" href="/leave-elements">
             <img class="img-ressource" src="/images/leave-elements.svg"
                  alt="Illustrationg d'une photo polaroid d'un paysage"/>
             <div class="contenu">
                 <h2>Laissez ce que vous trouvez</h2>
                 <p class="ressourcesText">Les éléments trouvés dans la nature ont un rôle dans l'écosystème ou
                     l'histoire du paysage.</p>
-                @template.components.link(path = "/laisser-elements-sur-place", textUnderline = "En savoir plus", text = "sur le sujet", linkType = com.milan.lnt.beans.LinkTypeEnum.right)
+                @template.components.link(path = "/leave-elements", textUnderline = "En savoir plus", text = "sur le sujet", linkType = com.milan.lnt.beans.LinkTypeEnum.right)
             </div>
         </a>
 

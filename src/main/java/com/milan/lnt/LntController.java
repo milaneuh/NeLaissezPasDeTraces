@@ -89,6 +89,10 @@ class LntController {
         return "pages/ressources/travel-durable-surface";
     }
 
+    @GetMapping("/remove-trash")
+    public String removeTrash(){
+        return "pages/ressources/remove-trash";
+    }
 }
 
 @Repository
