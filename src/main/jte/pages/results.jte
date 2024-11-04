@@ -9,7 +9,7 @@
     <h1>Vous avez terminé !</h1>
     <div class="textContainer">
         @if(points <= 20)
-            <p class="bigText">Ouch ! J’espère que tu as pu en apprendre un peu plus sur l’alcool. N’abandonne pas, tu
+            <p class="bigText">Ouch ! J’espère que tu as pu en apprendre un peu plus sur les principes Leave no traces. N’abandonne pas, tu
                 peux toujours réessayer !</p>
         @elseif(points > 20 && points <= 50)
             <p class="bigText">C’est un bon début ! Tu peux réessayer pour améliorer ton score, montre nous ce que tu as
