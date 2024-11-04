@@ -93,6 +93,26 @@ class LntController {
     public String removeTrash(){
         return "pages/ressources/remove-trash";
     }
+
+    @GetMapping("/leave-elements")
+    public String leaveElements(){
+        return "pages/ressources/leave-elements";
+    }
+
+    @GetMapping("/campfire")
+    public String campfire(){
+        return "pages/ressources/campfire";
+    }
+
+    @GetMapping("/respect-wildlife")
+    public String respectWildlife(){
+        return "pages/ressources/respect-wildlife";
+    }
+
+    @GetMapping("/considerate-others")
+    public String considerateOthers(){
+        return "pages/ressources/considerate-others";
+    }
 }
 
 @Repository

@@ -9,91 +9,106 @@
         @template.components.outside-link(path = "https://lnt.org/", textUnderline = "Visitez le site ", text = "de l'asociation", linkType = com.milan.lnt.beans.LinkTypeEnum.right)
     </div>
     <div hx-boost="true" class="ressources">
-        <a class="sujet" href="/plan-ahead">
-            <img class="img-ressource" src="/images/illu-plan-ahead.svg"
-                 alt="Illustrationg d'une personne qui prépare un projet"/>
-            <div class="contenu">
-                <h2>Planifiez à l'avance et préparez-vous</h2>
-                <p class="ressourcesText">Planifier à l'avance permet de profiter du voyage en toute sécurité tout en
-                    minimisant l'impact sur
-                    la nature. Une mauvaise planification peut nuire à l'expérience et à l'environnement.</p>
-                @template.components.link(path = "/plan-ahead", textUnderline = "En savoir plus", text = "sur le sujet", linkType = com.milan.lnt.beans.LinkTypeEnum.right)
-            </div>
-        </a>
+        <section class="sujet" >
+            <a href="/plan-ahead">
+                <img class="img-ressource" src="/images/illu-plan-ahead.svg"
+                     alt="Illustrationg d'une personne qui prépare un projet"/>
+                <div class="contenu">
+                    <h2>Planifiez à l'avance et préparez-vous</h2>
+                    <p class="ressourcesText">Planifier à l'avance permet de profiter du voyage en toute sécurité tout en
+                        minimisant l'impact sur
+                        la nature. Une mauvaise planification peut nuire à l'expérience et à l'environnement.</p>
+                    @template.components.link(path = "/plan-ahead", textUnderline = "En savoir plus", text = "sur le sujet", linkType = com.milan.lnt.beans.LinkTypeEnum.right)
+                </div>
+            </a>
+        </section>
 
-        <a class="sujet" href="/travel-durable-surface">
-            <img class="img-ressource" src="/images/illu-walk-durable.svg"
-                 alt="Illustrationg d'une personne qui marche sur un sentier"/>
-            <div class="contenu">
-                <h2>Voyager et camper sur des surfaces durables</h2>
-                <p class="ressourcesText">Voyager de manière responsable et camper sur
-                    des surfaces durables permet de minimiser l'impact humain et de préserver la nature.</p>
-                @template.components.link(path = "/travel-durable-surface", textUnderline = "En savoir plus", text = "sur le sujet", linkType = com.milan.lnt.beans.LinkTypeEnum.right)
-            </div>
-        </a>
+        <section class="sujet" >
+            <a href="/travel-durable-surface">
+                <img class="img-ressource" src="/images/illu-walk-durable.svg"
+                     alt="Illustrationg d'une personne qui marche sur un sentier"/>
+                <div class="contenu">
+                    <h2>Voyager et camper sur des surfaces durables</h2>
+                    <p class="ressourcesText">Voyager de manière responsable et camper sur
+                        des surfaces durables permet de minimiser l'impact humain et de préserver la nature.</p>
+                    @template.components.link(path = "/travel-durable-surface", textUnderline = "En savoir plus", text = "sur le sujet", linkType = com.milan.lnt.beans.LinkTypeEnum.right)
+                </div>
+            </a>
+        </section>
 
-        <a class="sujet" href="/remove-trash">
-            <img class="img-ressource" src="/images/remove-trash.svg"
-                 alt="Illustrationg de deux personnes rangeant des déchets"/>
-            <div class="contenu">
-                <h2>Éliminez les déchets de manière appropriée</h2>
-                <p class="ressourcesText">Éliminer correctement ses déchets en plein air est essentiel pour minimiser l'impact sur les autres, l'eau et la faune.</p>
-                @template.components.link(path = "/remove-trash", textUnderline = "En savoir plus", text = "sur le sujet", linkType = com.milan.lnt.beans.LinkTypeEnum.right)
-            </div>
-        </a>
+        <section class="sujet" >
+            <a href="/remove-trash">
+                <img class="img-ressource" src="/images/remove-trash.svg"
+                     alt="Illustrationg de deux personnes rangeant des déchets"/>
+                <div class="contenu">
+                    <h2>Éliminez les déchets de manière appropriée</h2>
+                    <p class="ressourcesText">Éliminer correctement ses déchets en plein air est essentiel pour minimiser
+                        l'impact sur les autres, l'eau et la faune.</p>
+                    @template.components.link(path = "/remove-trash", textUnderline = "En savoir plus", text = "sur le sujet", linkType = com.milan.lnt.beans.LinkTypeEnum.right)
+                </div>
+            </a>
+        </section>
 
-        <a class="sujet" href="/leave-elements">
-            <img class="img-ressource" src="/images/leave-elements.svg"
-                 alt="Illustrationg d'une photo polaroid d'un paysage"/>
-            <div class="contenu">
-                <h2>Laissez ce que vous trouvez</h2>
-                <p class="ressourcesText">Les éléments trouvés dans la nature ont un rôle dans l'écosystème ou
-                    l'histoire du paysage.</p>
-                @template.components.link(path = "/leave-elements", textUnderline = "En savoir plus", text = "sur le sujet", linkType = com.milan.lnt.beans.LinkTypeEnum.right)
-            </div>
-        </a>
+        <section class="sujet" >
+            <a href="/leave-elements">
+                <img class="img-ressource" src="/images/leave-elements.svg"
+                     alt="Illustrationg d'une photo polaroid d'un paysage"/>
+                <div class="contenu">
+                    <h2>Laissez ce que vous trouvez</h2>
+                    <p class="ressourcesText">Les éléments trouvés dans la nature ont un rôle dans l'écosystème ou
+                        l'histoire du paysage.</p>
+                    @template.components.link(path = "/leave-elements", textUnderline = "En savoir plus", text = "sur le sujet", linkType = com.milan.lnt.beans.LinkTypeEnum.right)
+                </div>
+            </a>
+        </section>
 
-        <a class="sujet">
-            <img class="img-ressource" src="/images/campfire.svg"
-                 alt="Illustrationg d'un feu de camp"/>
-            <div class="contenu">
-                <h2>Minimisez l'impact des feux de camp</h2>
-                <p class="ressourcesText">Les feux de camp peuvent causer des dommages durables à l'environnement.
-                    Privilégiez des alternatives comme les réchauds portables ou utilisez des emplacements de feu
-                    existants pour minimiser l'impact.</p>
-                @template.components.link(path = "/minimiser-impact-feu", textUnderline = "En savoir plus", text = "sur le sujet", linkType = com.milan.lnt.beans.LinkTypeEnum.right)
-            </div>
-        </a>
+        <section class="sujet">
+            <a href="/campfire">
+                <img class="img-ressource" src="/images/campfire.svg"
+                     alt="Illustrationg d'un feu de camp"/>
+                <div class="contenu">
+                    <h2>Minimisez l'impact des feux de camp</h2>
+                    <p class="ressourcesText">Les feux de camp peuvent causer des dommages durables à l'environnement.
+                        Privilégiez des alternatives comme les réchauds portables ou utilisez des emplacements de feu
+                        existants pour minimiser l'impact.</p>
+                    @template.components.link(path = "/campfire", textUnderline = "En savoir plus", text = "sur le sujet", linkType = com.milan.lnt.beans.LinkTypeEnum.right)
+                </div>
+            </a>
+        </section>
+        
+        <section class="sujet">
+            <a href="/respect-wildlife">
+                <img class="img-ressource" src="/images/respect-animals.svg"
+                     alt="Illustrationg d'une femme dans la nature observant les oiseaux"/>
+                <div class="contenu">
+                    <h2>Respectez la faune</h2>
+                    <p class="ressourcesText">Observez la faune de loin pour éviter de la déranger. Ne nourrissez jamais les
+                        animaux, car cela peut nuire à leur santé et perturber leur comportement naturel.</p>
+                    @template.components.link(path = "/respect-wildlife", textUnderline = "En savoir plus", text = "sur le sujet", linkType = com.milan.lnt.beans.LinkTypeEnum.right)
+                </div>
+            </a>
+        </section>
 
-        <a class="sujet">
-            <img class="img-ressource" src="/images/respecter-faune.svg"
-                 alt="Illustrationg d'une femme dans la nature observant les oiseaux"/>
-            <div class="contenu">
-                <h2>Respectez la faune</h2>
-                <p class="ressourcesText">Observez la faune de loin pour éviter de la déranger. Ne nourrissez jamais les
-                    animaux, car cela peut nuire à leur santé et perturber leur comportement naturel.</p>
-                @template.components.link(path = "/respecter-faune", textUnderline = "En savoir plus", text = "sur le sujet", linkType = com.milan.lnt.beans.LinkTypeEnum.right)
-            </div>
-        </a>
-
-        <a class="sujet">
-            <img class="img-ressource" src="/images/considerate-other.svg"
-                 alt="Illustrationg de plusieurs personnes marchants en nature"/>
-            <div class="contenu">
-                <h2>Soyez prévenant envers les autres</h2>
-                <p class="ressourcesText">Respectez les autres visiteurs en minimisant le bruit et en laissant de la
-                    place pour qu'ils puissent profiter de la nature. Soyez courtois pour que chacun ait une expérience
-                    agréable.</p>
-                @template.components.link(path = "/considerate-others", textUnderline = "En savoir plus", text = "sur le sujet", linkType = com.milan.lnt.beans.LinkTypeEnum.right)
-            </div>
-        </a>
+        <section class="sujet">
+            <a>
+                <img class="img-ressource" src="/images/considerate-other.svg"
+                     alt="Illustrationg de plusieurs personnes marchants en nature"/>
+                <div class="contenu">
+                    <h2>Soyez prévenant envers les autres</h2>
+                    <p class="ressourcesText">Respectez les autres visiteurs en minimisant le bruit et en laissant de la
+                        place pour qu'ils puissent profiter de la nature. Soyez courtois pour que chacun ait une expérience
+                        agréable.</p>
+                    @template.components.link(path = "/considerate-others", textUnderline = "En savoir plus", text = "sur le sujet", linkType = com.milan.lnt.beans.LinkTypeEnum.right)
+                </div>
+            </a>
+        </section>
     </div>
 
 
 </section>
 <style>
     .content {
-    max-width: 90vw;
+    max-width: 70vw;
     margin: auto;
     margin-top: 80px;
     display: flex;
