@@ -4,7 +4,7 @@
 
 <div class="nav-ressource">
     @template.components.link(path = "/considerate-others", textUnderline = "Soyez prévenant", text = "envers les autres", linkType = com.milan.lnt.beans.LinkTypeEnum.left)
-    @template.components.link(path = "/remove-trash", textUnderline = "Éliminez les déchets", text = "de manière appropriée", linkType = com.milan.lnt.beans.LinkTypeEnum.right)
+    @template.components.link(path = "/travel-durable-surface", textUnderline = "Voyager et camper", text = "sur des surfaces durables", linkType = com.milan.lnt.beans.LinkTypeEnum.right)
 </div>
 
 <section class="top-home-page">
@@ -119,7 +119,7 @@
             </p>
         </div>
     </section>
-    @template.components.outside-link(path = "https://lnt.org/why/7-principles/plan-ahead-and-prepare/", textUnderline = "Consultez les ressources", text = "officielles de Leave No Trace", linkType = com.milan.lnt.beans.LinkTypeEnum.right)
+    @template.components.outside-link(path = "https://lnt.org/why/7-principles/plan-ahead-and-prepare/", textUnderline = "Consultez les", text = "ressources officielles", linkType = com.milan.lnt.beans.LinkTypeEnum.right)
 
 </section>
 

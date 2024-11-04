@@ -84,6 +84,11 @@ class LntController {
         return "pages/ressources/plan-ahead";
     }
 
+    @GetMapping("/travel-durable-surface")
+    public String travelDurableSurface(){
+        return "pages/ressources/travel-durable-surface";
+    }
+
 }
 
 @Repository
